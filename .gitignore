@@ -1,0 +1,8 @@
+# Haskell
+.stack-work
+dist-*
+cabal.project.local
+*~
+
+# Mac
+.DS_Store
