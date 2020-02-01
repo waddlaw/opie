@@ -1,0 +1,4 @@
+:set prompt "λ> "
+:def! k! (\e -> return (":kind! " ++ e))
+import qualified Text.Show.Unicode
+:set -interactive-print=Text.Show.Unicode.uprint

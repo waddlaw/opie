@@ -35,6 +35,7 @@ common deps
     -Wall -Wcompat -Wincomplete-uni-patterns
     -Wincomplete-record-updates -Wnoncanonical-monad-instances
     -Wredundant-constraints -Wtabs
+    -j4 +RTS -A128m -n2m -qg -RTS
 
   if flag(pedantic)
     ghc-options: -Werror
