@@ -1,5 +1,6 @@
 module Lib
-  ( lib )
+  ( lib,
+  )
 where
 
 lib :: ()

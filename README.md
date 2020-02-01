@@ -58,13 +58,49 @@ $ cabal-fmt --version
 0.1.2
 ```
 
-## cabal-fmt
+- [tweag/ormolu](https://github.com/tweag/ormolu)
+
+```shell
+$ cabal update
+$ cabal install ormolu
+$ ormolu --version
+ormolu 0.0.3.1 UNKNOWN UNKNOWN
+using ghc-lib-parser 8.8.2
+```
+
+- [ndmitchell/hlint](https://github.com/ndmitchell/hlint)
+
+```shell
+$ cabal update
+$ cabal install hlint
+$ hlint -V
+HLint v2.2.9, (C) Neil Mitchell 2006-2020
+```
+
+## How to use these tools
+
+### cabal-fmt
 
 ```shell
 $ cabal-fmt -i *.cabal
 ```
 
-## Travis CI
+### Ormolu
+
+```shell
+$ ormolu -p -m inplace $(find app -type f -name "*.hs")
+$ ormolu -p -m inplace $(find src -type f -name "*.hs")
+$ ormolu -p -m inplace $(find bench -type f -name "*.hs")
+$ ormolu -p -m inplace $(find test -type f -name "*.hs")
+```
+
+### hlint
+
+```shell
+$ hlint 
+```
+
+### Travis CI
 
 ```shell
 $ haskell-ci cabal.project --output .travis.yml
